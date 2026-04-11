@@ -21,8 +21,8 @@ public class Main {
         Scanner inFile = new Scanner(new FileReader("books.txt"));
         inFile.useDelimiter(";");
         while (inFile.hasNext()) {
-            String title = inFile.next();
-            String author = inFile.next();
+            String title = inFile.next().trim();
+            String author = inFile.next().trim();
             int pages = inFile.nextInt(); 
             Book book = new Book(title, author, pages);
             booksArr.add(book);
