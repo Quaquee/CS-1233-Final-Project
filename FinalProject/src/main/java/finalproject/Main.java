@@ -6,14 +6,13 @@ import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 
-public class Main {
-    static ArrayList<Book> booksArr = new ArrayList<>();
-    
+public class Main { 
     public static void main(String[] args) throws FileNotFoundException {
         initialize();
-        
-        for (Book book : booksArr) {
-            System.out.println(book.getTitle());
+
+        //testing
+        for (Book book : Storage.booksArr) {
+            System.out.printf(("%s %s %d%n", book.getTitle(), book.getAuthor(), book.getPages());
         }
     }
     
@@ -25,7 +24,7 @@ public class Main {
             String author = inFile.next().trim();
             int pages = inFile.nextInt(); 
             Book book = new Book(title, author, pages);
-            booksArr.add(book);
+            Storage.booksArr.add(book);
         }
         inFile.close();
     }
