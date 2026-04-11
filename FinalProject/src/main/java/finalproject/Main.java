@@ -12,7 +12,7 @@ public class Main {
 
         //testing
         for (Book book : Storage.booksArr) {
-            System.out.printf(("%s %s %d%n", book.getTitle(), book.getAuthor(), book.getPages());
+            System.out.printf("%s %s %d%n", book.getTitle(), book.getAuthor(), book.getPages());
         }
     }
     
