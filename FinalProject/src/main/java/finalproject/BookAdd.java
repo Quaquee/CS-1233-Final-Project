@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Comparator;
 
 public class BookAdd {
-    public static void input(Scanner sc) {
+    public static void addBook(Scanner sc) {
         //sc.nextLine();
         System.out.print("Enter title: ");
         String title = sc.nextLine().trim();

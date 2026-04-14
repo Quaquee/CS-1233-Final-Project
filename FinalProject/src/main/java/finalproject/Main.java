@@ -1,7 +1,6 @@
 package finalproject;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
@@ -9,10 +8,31 @@ import java.io.FileNotFoundException;
 public class Main { 
     public static void main(String[] args) throws FileNotFoundException {
         initialize();
-
-        //testing
-        for (Book book : Storage.booksArr) {
-            System.out.printf("%s %s %d%n", book.getTitle(), book.getAuthor(), book.getPages());
+        Scanner sc = new Scanner(System.in);
+        int choice = 0;
+        
+        while(choice != 7) {
+            System.out.println("=====MENU=====");
+            System.out.printf("1) Add Book%n");
+            System.out.printf("2) View Books%n");
+            System.out.printf("3) Search Book%n");
+            System.out.printf("4) Classify Books%n");
+            System.out.printf("5) Borrow Book%n");
+            System.out.printf("6) Save report%n");
+            System.out.printf("7) Exit%n");
+            System.out.printf("Enter Choice: ");
+            choice = sc.nextInt(); sc.nextLine();
+            switch (choice) {
+                case 1: BookAdd.addBook(sc); break;
+                case 2: break;
+                case 3: break;
+                case 4: BooksClassify.classifyBooks(); break;
+                case 5: BookBorrow.borrowBook(); break;
+                case 6: break;
+                case 7: continue;
+                default: break;
+            }
+            System.out.println();
         }
     }
     

@@ -3,7 +3,6 @@ package finalproject;
 import java.util.ArrayList;
 
 public class BookSearch {
-
     public static void searchBook(String title, ArrayList<Book> booksArr) {
 
         for (Book book : booksArr) {
