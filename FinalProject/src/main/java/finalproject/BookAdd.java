@@ -17,6 +17,6 @@ public class BookAdd {
         Book book = new Book(title, author, pages);
         Storage.booksArr.add(book);
         Storage.booksArr.sort(Comparator.comparing(Book::getTitle, String.CASE_INSENSITIVE_ORDER));
-        System.out.println("Book successfully added");
+        System.out.println("Book successfully added.");
     }
 }
