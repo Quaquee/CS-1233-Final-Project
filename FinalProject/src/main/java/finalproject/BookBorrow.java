@@ -1,19 +1,12 @@
 package finalproject;
 
-import java.util.Scanner;
-
 public class BookBorrow {
 
-    public static void borrowBook() {
-        Scanner sc = new Scanner(System.in);
-
+    public static void borrowBook(String title) {     
         if (Storage.booksArr.isEmpty()) {
             System.out.println("No books available to borrow.");
             return;
         }
-
-        System.out.print("Enter book title to borrow: ");
-        String title = sc.nextLine();
 
         boolean found = false;
 
