@@ -36,7 +36,7 @@ public class Main {
                 case 7: bookReturnInput(sc); break;
                 case 8: BooksSave.saveBooks(); break;
                 case 9: continue;
-                default: System.out.println("Invalid choice. Please try again."); break;
+                default: System.out.println("Invalid input. Please try again."); break;
             }
             System.out.println();
         }
@@ -64,7 +64,7 @@ public class Main {
                 return intOut;
             }
             catch (InputMismatchException e) {
-                System.out.println("Invalid Input. Please try again.");
+                System.out.println("Invalid input. Please try again.");
                 sc.nextLine();
             }
         }
