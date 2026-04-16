@@ -32,7 +32,7 @@ public class Main {
                 case 4: bookSearchInput(sc); break;
                 case 5: BooksClassify.classifyBooks(); break;
                 case 6: bookBorrowInput(sc); break;
-                case 7: break;
+                case 7: bookReturnInput(sc); break;
                 case 8: BooksSave.saveBooks(); break;
                 case 9: continue;
                 default: System.out.println("Invalid choice. Please try again."); break;
@@ -78,6 +78,12 @@ public class Main {
         System.out.print("Enter book title to search for: ");
         String title = sc.nextLine().trim();
         BookSearch.searchBook(title);
+    }
+    
+    public static void bookReturnInput(Scanner sc) {
+        System.out.print("Enter book title to return: ");
+        String title = sc.nextLine().trim();
+        BookReturn.returnBook(title);
     }
     
     public static void bookBorrowInput(Scanner sc) {

@@ -13,8 +13,8 @@ public class BooksClassify {
         System.out.println("\nLong Books (300+ pages):");
         for (Book book : Storage.booksArr) {
             if (book.getPages() >= 300) {
-                System.out.printf("%s by %s (%d pages)%n",
-                        book.getTitle(), book.getAuthor(), book.getPages());
+                System.out.printf("%s by %s (%d pages) %s%n",
+                        book.getTitle(), book.getAuthor(), book.getPages(), book.getAvailability() ? "" : "(NOT AVAILABLE)");
             }
         }
 
@@ -22,7 +22,7 @@ public class BooksClassify {
         for (Book book : Storage.booksArr) {
             if (book.getPages() < 300) {
                 System.out.printf("%s by %s (%d pages)%n",
-                        book.getTitle(), book.getAuthor(), book.getPages());
+                        book.getTitle(), book.getAuthor(), book.getPages(), book.getAvailability() ? "" : "(NOT AVAILABLE)");
             }
         }
     }

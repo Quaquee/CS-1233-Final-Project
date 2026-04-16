@@ -1,8 +1,8 @@
 package finalproject;
 
-public class BookBorrow {
+public class BookReturn {
 
-    public static void borrowBook(String title) {     
+    public static void returnBook(String title) {     
         if (Storage.booksArr.isEmpty()) {
             System.out.println("No books available to borrow.");
             return;
@@ -14,14 +14,14 @@ public class BookBorrow {
             Book book = Storage.booksArr.get(i);
 
             if (book.getTitle().equalsIgnoreCase(title)) {
-                if (book.getAvailability()) {
-                    System.out.println("Borrowed: " + book.getTitle());
-                    book.setAvailability(false);
+                if (!book.getAvailability()) {
+                    System.out.println("Returned: " + book.getTitle());
+                    book.setAvailability(true);
                     found = true;
                     break;
                 }
                 else {
-                    System.out.printf("%s is currently unavailable.%n" + book.getTitle());
+                    System.out.printf("%s is already returned.%n" + book.getTitle());
                     break;
                 }
             }

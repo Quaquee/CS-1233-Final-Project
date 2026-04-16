@@ -12,8 +12,8 @@ public class BooksSave {
             outFile.print(book.getPages() + ";");
             outFile.print(book.getAvailability());
             outFile.println();
-            System.out.println("Saved successfully!");
         }
+        System.out.println("Saved successfully!");
         outFile.close();
     }
 }
