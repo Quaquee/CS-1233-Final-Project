@@ -14,14 +14,14 @@ public class BookBorrow {
             Book book = Storage.booksArr.get(i);
 
             if (book.getTitle().equalsIgnoreCase(title)) {
+                found = true;
                 if (book.getAvailability()) {
                     System.out.println("Borrowed: " + book.getTitle());
                     book.setAvailability(false);
-                    found = true;
                     break;
                 }
                 else {
-                    System.out.printf("%s is currently unavailable.%n" + book.getTitle());
+                    System.out.printf("%s is currently unavailable.%n", book.getTitle());
                     break;
                 }
             }

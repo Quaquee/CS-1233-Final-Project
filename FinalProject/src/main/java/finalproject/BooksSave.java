@@ -10,6 +10,8 @@ public class BooksSave {
             outFile.print(book.getTitle() + ";");
             outFile.print(book.getAuthor() + ";");
             outFile.print(book.getPages() + ";");
+            String bookLength = (book.getPages() < 300 ? "SHORT" : "LONG");
+            outFile.print(bookLength + ";");
             outFile.print(book.getAvailability());
             outFile.println();
         }

@@ -25,6 +25,7 @@ public class Main {
             System.out.printf("9)Exit%n");
             System.out.printf("Enter Choice: ");
             choice = sc.nextInt(); sc.nextLine();
+            System.out.println();
             switch (choice) {
                 case 1: bookAddInput(sc); break;
                 case 2: bookRemoveInput(sc); break;
@@ -48,7 +49,7 @@ public class Main {
         while (inFile.hasNext()) {
             String line = inFile.nextLine().trim();
             String[] parts = line.split(";");
-            Book book = new Book(parts[0], parts[1], Integer.parseInt(parts[2]), Boolean.parseBoolean(parts[3]));
+            Book book = new Book(parts[0], parts[1], Integer.parseInt(parts[2]), parts[3], Boolean.parseBoolean(parts[4]));
             Storage.booksArr.add(book);
         }
         Storage.booksArr.sort(Comparator.comparing(Book::getTitle, String.CASE_INSENSITIVE_ORDER));

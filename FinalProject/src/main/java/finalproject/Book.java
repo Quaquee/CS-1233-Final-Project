@@ -4,12 +4,14 @@ public class Book {
     private String title;
     private String author;
     private int pages;
+    private String category;
     private Boolean availability;
     
-    public Book(String title, String author, int pages, Boolean availability) {
+    public Book(String title, String author, int pages, String category, Boolean availability) {
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.category = category;
         this.availability = availability;
     }
     
@@ -23,6 +25,10 @@ public class Book {
     
     public int getPages() {
         return pages;
+    }
+    
+    public String getCategory() {
+        return category;
     }
     
     public Boolean getAvailability() {

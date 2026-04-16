@@ -14,14 +14,14 @@ public class BookReturn {
             Book book = Storage.booksArr.get(i);
 
             if (book.getTitle().equalsIgnoreCase(title)) {
+                found = true;
                 if (!book.getAvailability()) {
                     System.out.println("Returned: " + book.getTitle());
                     book.setAvailability(true);
-                    found = true;
                     break;
                 }
                 else {
-                    System.out.printf("%s is already returned.%n" + book.getTitle());
+                    System.out.printf("%s is already returned.%n", book.getTitle());
                     break;
                 }
             }
