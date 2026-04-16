@@ -60,7 +60,8 @@ public class Main {
         while (true) {
             try {
                 System.out.print(text);
-                int intOut = sc.nextInt(); sc.nextLine();
+                int intOut = sc.nextInt(); 
+                sc.nextLine();
                 return intOut;
             }
             catch (InputMismatchException e) {
