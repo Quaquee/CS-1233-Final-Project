@@ -26,15 +26,15 @@ public class Main {
             choice = sc.nextInt(); sc.nextLine();
             switch (choice) {
                 case 1: bookAddInput(sc); break;
-                case 2: break;
-                case 3: break;
+                case 2: bookRemoveInput(sc); break;
+                case 3: BooksView.viewBooks(); break;
                 case 4: bookSearchInput(sc); break;
                 case 5: BooksClassify.classifyBooks(); break;
                 case 6: bookBorrowInput(sc); break;
                 case 7: break;
                 case 8: break;
                 case 9: continue;
-                default: break;
+                default: System.out.println("Invalid choice. Please try again."); break;
             }
             System.out.println();
         }

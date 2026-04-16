@@ -1,13 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package finalproject;
 
-/**
- *
- * @author RJ Young
- */
+import java.util.Iterator;
+
 public class BookRemove {
-    
+    public static void removeBook(String title) {
+        Iterator<Book> iterator = Storage.booksArr.iterator();
+        while (iterator.hasNext()) {
+            Book book = iterator.next();
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                System.out.printf("%s removed from inventory%n", book.getTitle());
+                Storage.booksArr.remove(book);
+                return;
+            }
+        }
+        System.out.println("Book not found!");
+    }
 }
