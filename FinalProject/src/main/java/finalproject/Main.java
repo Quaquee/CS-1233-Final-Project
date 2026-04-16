@@ -1,10 +1,10 @@
 package finalproject;
 
 import java.util.Scanner;
-import java.io.PrintWriter;
+import java.util.Comparator;
+import java.util.InputMismatchException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-import java.util.Comparator;
 
 public class Main { 
     public static void main(String[] args) throws FileNotFoundException {
@@ -23,8 +23,8 @@ public class Main {
             System.out.printf("7)Return Book%n");
             System.out.printf("8)Save report%n");
             System.out.printf("9)Exit%n");
-            System.out.printf("Enter Choice: ");
-            choice = sc.nextInt(); sc.nextLine();
+            
+            choice = readInt(sc, "Enter Choice: ");
             System.out.println();
             switch (choice) {
                 case 1: bookAddInput(sc); break;
@@ -56,40 +56,49 @@ public class Main {
         inFile.close();
     }
     
+    public static int readInt(Scanner sc, String text) {
+        while (true) {
+            try {
+                System.out.print(text);
+                int intOut = sc.nextInt(); sc.nextLine();
+                return intOut;
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Invalid Input. Please try again.");
+                sc.nextLine();
+            }
+        }
+    }
+    
+    public static String readLine(Scanner sc, String text) {
+        System.out.print(text);
+        return sc.nextLine().trim();
+    }
+    
     public static void bookAddInput(Scanner sc) {
-        System.out.print("Enter title: ");
-        String title = sc.nextLine().trim();
-        
-        System.out.print("Enter author: ");
-        String author = sc.nextLine().trim();
-        
-        System.out.print("Enter page count: ");
-        int pages = sc.nextInt(); sc.nextLine();
+        String title = readLine(sc, "Enter title: ");
+        String author = readLine(sc, "Enter author: ");
+        int pages = readInt(sc, "Enter page count: ");
         BookAdd.addBook(title, author, pages);
     }
     
     public static void bookRemoveInput(Scanner sc) {
-        System.out.print("Enter title: ");
-        String title = sc.nextLine().trim();
-        
+        String title = readLine(sc, "Enter book title to remove: ");
         BookRemove.removeBook(title);
     }
     
     public static void bookSearchInput(Scanner sc) {
-        System.out.print("Enter book title to search for: ");
-        String title = sc.nextLine().trim();
+        String title = readLine(sc, "Enter book title to search for: ");
         BookSearch.searchBook(title);
     }
     
     public static void bookReturnInput(Scanner sc) {
-        System.out.print("Enter book title to return: ");
-        String title = sc.nextLine().trim();
+        String title = readLine(sc, "Enter book title to return: ");
         BookReturn.returnBook(title);
     }
     
     public static void bookBorrowInput(Scanner sc) {
-        System.out.print("Enter book title to borrow: ");
-        String title = sc.nextLine().trim();
+        String title = readLine(sc, "Enter book title to borrow: ");
         BookBorrow.borrowBook(title);
     }
 }
