@@ -18,7 +18,7 @@ public class BooksClassify {
             }
         }
 
-        System.out.println("\nShort Books (<300 pages):");
+        System.out.println("\nShort Books (<=300 pages):");
         for (Book book : Storage.booksArr) {
             if (book.getCategory().equals("SHORT")) {
                 System.out.printf("%s by %s (%d pages)%n",
