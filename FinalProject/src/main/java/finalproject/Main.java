@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.util.Comparator;
 
 public class Main { 
     public static void main(String[] args) throws FileNotFoundException {
@@ -32,7 +33,7 @@ public class Main {
                 case 5: BooksClassify.classifyBooks(); break;
                 case 6: bookBorrowInput(sc); break;
                 case 7: break;
-                case 8: break;
+                case 8: BooksSave.saveBooks(); break;
                 case 9: continue;
                 default: System.out.println("Invalid choice. Please try again."); break;
             }
@@ -45,12 +46,12 @@ public class Main {
         Scanner inFile = new Scanner(new FileReader("books.txt"));
         inFile.useDelimiter(";");
         while (inFile.hasNext()) {
-            String title = inFile.next().trim();
-            String author = inFile.next().trim();
-            int pages = inFile.nextInt(); 
-            Book book = new Book(title, author, pages);
+            String line = inFile.nextLine().trim();
+            String[] parts = line.split(";");
+            Book book = new Book(parts[0], parts[1], Integer.parseInt(parts[2]), Boolean.parseBoolean(parts[3]));
             Storage.booksArr.add(book);
         }
+        Storage.booksArr.sort(Comparator.comparing(Book::getTitle, String.CASE_INSENSITIVE_ORDER));
         inFile.close();
     }
     
