@@ -11,25 +11,29 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int choice = 0;
         
-        while(choice != 7) {
+        while(choice != 9) {
             System.out.println("=====MENU=====");
             System.out.printf("1)Add Book%n");
-            System.out.printf("2)View Books%n");
-            System.out.printf("3)Search Book%n");
-            System.out.printf("4)Classify Books%n");
-            System.out.printf("5)Borrow Book%n");
-            System.out.printf("6)Save report%n");
-            System.out.printf("7)Exit%n");
+            System.out.printf("2)Remove Book%n");
+            System.out.printf("3)View Books%n");
+            System.out.printf("4)Search Book%n");
+            System.out.printf("5)Classify Books%n");
+            System.out.printf("6)Borrow Book%n");
+            System.out.printf("7)Return Book%n");
+            System.out.printf("8)Save report%n");
+            System.out.printf("9)Exit%n");
             System.out.printf("Enter Choice: ");
             choice = sc.nextInt(); sc.nextLine();
             switch (choice) {
                 case 1: bookAddInput(sc); break;
                 case 2: break;
-                case 3: bookSearchInput(sc); break;
-                case 4: BooksClassify.classifyBooks(); break;
-                case 5: bookBorrowInput(sc); break;
-                case 6: break;
-                case 7: continue;
+                case 3: break;
+                case 4: bookSearchInput(sc); break;
+                case 5: BooksClassify.classifyBooks(); break;
+                case 6: bookBorrowInput(sc); break;
+                case 7: break;
+                case 8: break;
+                case 9: continue;
                 default: break;
             }
             System.out.println();
@@ -60,6 +64,13 @@ public class Main {
         System.out.print("Enter page count: ");
         int pages = sc.nextInt(); sc.nextLine();
         BookAdd.addBook(title, author, pages);
+    }
+    
+    public static void bookRemoveInput(Scanner sc) {
+        System.out.print("Enter title: ");
+        String title = sc.nextLine().trim();
+        
+        BookRemove.removeBook(title);
     }
     
     public static void bookSearchInput(Scanner sc) {
