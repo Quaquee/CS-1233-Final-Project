@@ -4,7 +4,7 @@ The Adventures of Huckleberry Finn;Mark Twain;366;true;
 Treasure Island;Robert Louis Stevenson;311;true;
 Pride and Prejudice;Jane Austen;432;true;
 Wuthering Heights;Emily Bronte;416;true;
-Jane Eyre;Charlotte Brontë;532;true;
+Jane Eyre;Charlotte Bronte;532;true;
 Moby-Dick;Herman Melville;720;true;
 The Scarlet Letter;Nathaniel Hawthorne;272;true;
 Gulliver's Travels;Jonathan Swift;336;true;

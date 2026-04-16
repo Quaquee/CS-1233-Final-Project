@@ -1,0 +1,15 @@
+A Christmas Carol;Charles Dickens;104;true
+A Tale of Two Cities;Charles Dickens;489;true
+Alice's Adventures in Wonderland;Lewis Carroll;200;true
+David Copperfield;Charles Dickens;928;true
+Don Quixote;Miguel de Cervantes;940;true
+Gulliver's Travels;Jonathan Swift;336;true
+Jane Eyre;Charlotte Brontë;532;true
+Little Women;Louisa May Alcott;759;true
+Moby-Dick;Herman Melville;720;true
+Pride and Prejudice;Jane Austen;432;true
+The Adventures of Huckleberry Finn;Mark Twain;366;true
+The Hobbit;J.R.R. Tolkien;310;true
+The Scarlet Letter;Nathaniel Hawthorne;272;true
+Treasure Island;Robert Louis Stevenson;311;true
+Wuthering Heights;Emily Bronte;416;true
