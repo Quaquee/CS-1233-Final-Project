@@ -1,6 +1,11 @@
 package finalproject;
 
-import java.util.ArrayList;
+/*
+Group coordinator: Young, Ray-Jan
+Members: Agustin, Keith
+         Miguel, Steven Gabriel
+         Sears, Ryan Jake
+*/
 
 public class BooksView {
     public static void viewBooks() {

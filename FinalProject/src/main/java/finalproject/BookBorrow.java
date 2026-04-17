@@ -1,5 +1,12 @@
 package finalproject;
 
+/*
+Group coordinator: Young, Ray-Jan
+Members: Agustin, Keith
+         Miguel, Steven Gabriel
+         Sears, Ryan Jake
+*/
+
 public class BookBorrow {
 
     public static void borrowBook(String title) {     

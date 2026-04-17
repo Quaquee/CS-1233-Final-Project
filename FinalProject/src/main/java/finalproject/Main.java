@@ -1,5 +1,12 @@
 package finalproject;
 
+/*
+Group coordinator: Young, Ray-Jan
+Members: Agustin, Keith
+         Miguel, Steven Gabriel
+         Sears, Ryan Jake
+*/
+
 import java.util.Scanner;
 import java.util.Comparator;
 import java.util.InputMismatchException;

@@ -1,5 +1,12 @@
 package finalproject;
 
+/*
+Group coordinator: Young, Ray-Jan
+Members: Agustin, Keith
+         Miguel, Steven Gabriel
+         Sears, Ryan Jake
+*/
+
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
 
