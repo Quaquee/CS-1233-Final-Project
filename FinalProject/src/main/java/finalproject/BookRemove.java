@@ -15,11 +15,12 @@ public class BookRemove {
         while (iterator.hasNext()) {
             Book book = iterator.next();
             if (book.getTitle().equalsIgnoreCase(title)) {
-                System.out.printf("%s removed from inventory%n", book.getTitle());
+                String tempTitle = book.getTitle();
                 Storage.booksArr.remove(book);
+                System.out.printf("%s successfully removed from inventory%n", tempTitle);
                 return;
             }
         }
-        System.out.println("Book not found!");
+        System.out.println("Book not found.");
     }
 }
