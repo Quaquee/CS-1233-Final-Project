@@ -10,7 +10,7 @@ Members: Agustin, Keith
 public class BooksView {
     public static void viewBooks() {
         if (Storage.booksArr.isEmpty()) {
-            System.out.println("No books in system.");
+            System.out.println("No books in inventory.");
             return;
         }
         
