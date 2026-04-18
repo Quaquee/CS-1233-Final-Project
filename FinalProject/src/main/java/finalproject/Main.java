@@ -24,8 +24,8 @@ public class Main {
             System.out.printf("1)Add Book%n");
             System.out.printf("2)Remove Book%n");
             System.out.printf("3)View Books%n");
-            System.out.printf("4)Search Book%n");
-            System.out.printf("5)Classify Books%n");
+            System.out.printf("4)Classify Books%n");
+            System.out.printf("5)Search Book%n");
             System.out.printf("6)Borrow Book%n");
             System.out.printf("7)Return Book%n");
             System.out.printf("8)Save report%n");
@@ -37,8 +37,8 @@ public class Main {
                 case 1: bookAddInput(sc); break;
                 case 2: bookRemoveInput(sc); break;
                 case 3: BooksView.viewBooks(); break;
-                case 4: bookSearchInput(sc); break;
-                case 5: BooksClassify.classifyBooks(); break;
+                case 4: BooksClassify.classifyBooks(); break;
+                case 5: bookSearchInput(sc); break;
                 case 6: bookBorrowInput(sc); break;
                 case 7: bookReturnInput(sc); break;
                 case 8: BooksSave.saveBooks(); break;
@@ -51,8 +51,9 @@ public class Main {
     }
     
     public static void initialize() throws FileNotFoundException {
-        Scanner inFile = new Scanner(new FileReader("books.txt"));
+        Scanner inFile = new Scanner(new FileReader("bookinventory.txt"));
         inFile.useDelimiter(";");
+        inFile.nextLine();   //Skips comment line in txt file
         while (inFile.hasNext()) {
             String line = inFile.nextLine().trim();
             String[] parts = line.split(";");
@@ -96,7 +97,7 @@ public class Main {
     }
     
     public static void bookSearchInput(Scanner sc) {
-        String title = readLine(sc, "Enter book title to search for: ");
+        String title = readLine(sc, "Enter book title to search: ");
         BookSearch.searchBook(title);
     }
     

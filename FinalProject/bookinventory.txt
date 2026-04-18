@@ -1,0 +1,16 @@
+//[TITLE];[AUTHOR];[PAGES];[CATEGORY];[AVAILABILITY]
+A Christmas Carol;Charles Dickens;104;SHORT;true
+A Tale of Two Cities;Charles Dickens;489;LONG;true
+Alice's Adventures in Wonderland;Lewis Carroll;200;SHORT;true
+David Copperfield;Charles Dickens;928;LONG;true
+Don Quixote;Miguel de Cervantes;940;LONG;true
+Gulliver's Travels;Jonathan Swift;336;LONG;true
+Jane Eyre;Charlotte Bronte;532;LONG;true
+Little Women;Louisa May Alcott;759;LONG;true
+Moby-Dick;Herman Melville;720;LONG;true
+Pride and Prejudice;Jane Austen;432;LONG;true
+The Adventures of Huckleberry Finn;Mark Twain;366;LONG;true
+The Hobbit;J.R.R. Tolkien;310;LONG;true
+The Scarlet Letter;Nathaniel Hawthorne;272;SHORT;true
+Treasure Island;Robert Louis Stevenson;311;LONG;true
+Wuthering Heights;Emily Bronte;416;LONG;true

@@ -12,7 +12,8 @@ import java.io.FileNotFoundException;
 
 public class BooksSave {
     public static void saveBooks() throws FileNotFoundException {
-        PrintWriter outFile = new PrintWriter("books.txt");
+        PrintWriter outFile = new PrintWriter("bookinventory.txt");
+        outFile.println("//[TITLE];[AUTHOR];[PAGES];[CATEGORY];[AVAILABILITY]");   //prints comment line in txt file
         for (Book book : Storage.booksArr) {
             outFile.print(book.getTitle() + ";");
             outFile.print(book.getAuthor() + ";");

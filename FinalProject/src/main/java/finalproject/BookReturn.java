@@ -10,11 +10,6 @@ Members: Agustin, Keith
 public class BookReturn {
 
     public static void returnBook(String title) {     
-        if (Storage.booksArr.isEmpty()) {
-            System.out.println("No books available to borrow.");
-            return;
-        }
-
         boolean found = false;
 
         for (int i = 0; i < Storage.booksArr.size(); i++) {

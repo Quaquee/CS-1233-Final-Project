@@ -9,12 +9,15 @@ Members: Agustin, Keith
 
 public class BooksView {
     public static void viewBooks() {
+        if (Storage.booksArr.isEmpty()) {
+            System.out.println("No books in system.");
+            return;
+        }
+        
         for (Book book : Storage.booksArr){
-            System.out.println("Title: " + book.getTitle());
-            System.out.println("Author: " + book.getAuthor());
-            System.out.println("Pages: " + book.getPages());
-            System.out.printf("Status: %s%n", book.getAvailability() ? "Available" : "Not Available");
-            System.out.println("----------");
+            System.out.printf("%-60s  (%d pages)  %s%n",
+                        book.getTitle() + "  by " + book.getAuthor(), book.getPages(), book.getAvailability() ? "" : "(NOT AVAILABLE)");
+            System.out.println("-------------------------------------------------------------------------");
         }   
     }
 }
